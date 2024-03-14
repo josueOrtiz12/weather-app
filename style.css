@@ -1,0 +1,36 @@
+.container {
+    text-align: center;
+    margin: 2%;
+}
+
+div#tempeture {
+    font-size: 10vh;
+}
+.contry {
+    font-size: 2vh;
+}
+.city {
+    font-size: 3vh;
+}
+.climate {
+    font-size: 4vh;
+}
+
+.weather{
+    font-size: 7vh;
+}
+.time{
+    font-size: 4vh;
+}
+.card {
+    background: #fff;
+    width: 46%;
+    margin: auto;
+    padding: 43px;
+    border-radius: 16px;
+}
+#body{
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
