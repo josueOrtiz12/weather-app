@@ -7,10 +7,10 @@ div#tempeture {
     font-size: 10vh;
 }
 .contry {
-    font-size: 2vh;
+    font-size: 26px;
 }
 .city {
-    font-size: 3vh;
+    font-size: 28px;
 }
 .climate {
     font-size: 4vh;
@@ -28,9 +28,14 @@ div#tempeture {
     margin: auto;
     padding: 43px;
     border-radius: 16px;
+    box-shadow: 2px 2px 11px 2px;
+}
+.card-row{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
 }
 #body{
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
 }

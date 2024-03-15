@@ -13,11 +13,15 @@ async function callApi(pais, ciudad) {
     console.log(dataJson);
 
   const tempetureDate = dataJson.main.temp;
-  const weather = dataJson.weather[0].main;
-
+  // const weather = dataJson.weather[0].main;
+  const {main} = dataJson.weather[0]
+  const {icon} = dataJson.weather[0];
 
   document.getElementById("tempeture").innerHTML = tempetureDate;
-  document.getElementById("weather").innerHTML = weather;
+  document.getElementById("weather").innerHTML = main;
+  document.getElementById("icon").setAttribute("src" , `icons/${icon}.png`);
+
+
   })();
 
 
@@ -50,14 +54,16 @@ switch (true) {
   document.querySelector('body').style.background = `linear-gradient(180deg, rgba(29,127,176,1) 0%, rgba(175,189,196,1) 100%), rgb(29, 127, 176)`;
   break;
 
-  case (onlyHour >= 15) && (onlyHour <= 18):
-    console.log('funciona');
+  case (onlyHour >= 15) && (onlyHour <= 17):
       // document.getElementById('contry').style.color = "red"
-      document.querySelector('body').style.background = `linear-gradient(rgb(2, 0, 36) 0%, rgb(9, 9, 121) 68%, rgb(92, 9, 119) 88%), rgb(2, 0, 36)`;
+      document.querySelector('body').style.background = `linear-gradient(180deg, rgba(107,163,180,1) 0%, rgba(202,215,94,1) 41%, rgba(201,187,114,1) 100%), rgb(107,163,180)`;
+  break;
+  case (onlyHour >= 17) && (onlyHour <= 19):
+      // document.getElementById('contry').style.color = "red"
+      document.querySelector('body').style.background = `linear-gradient(180deg, rgba(166,107,180,1) 0%, rgba(188,147,65,1) 53%, rgba(114,168,201,1) 100%), rgb(166,107,180)`;
   break;
 
   case (onlyHour >= 19) && (onlyHour <= 23):
-    console.log('funciona');
       // document.getElementById('contry').style.color = "red"
       document.querySelector('body').style.background = `linear-gradient(rgb(3 2 22) 0%, rgb(3 3 24) 68%, rgb(4 2 28))`;
   break;
