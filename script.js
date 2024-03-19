@@ -19,7 +19,6 @@ async function callApi(pais, ciudad) {
   return dataJson;
 }
   
-  
   (async () => {
     const dataJson = await callApi('Ve', 'Caracas');
     console.log(dataJson);
