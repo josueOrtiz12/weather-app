@@ -1,5 +1,5 @@
 async function callApi(pais, ciudad) {
-    const claveAPI = 'bedca9901b63809b9a5857951ea9132a';
+    const claveAPI = '';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${pais},${ciudad}&appid=${claveAPI}`;
   
     const respuesta = await fetch(url);
