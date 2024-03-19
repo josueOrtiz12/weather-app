@@ -1,12 +1,23 @@
+const archivoJSON = './variables.json';
+
+async function getApiKey() {
+  const respuesta = await fetch(archivoJSON);
+  const datosJSON = await respuesta.json();
+
+  const API_KEY = datosJSON.API_KEY;
+  return API_KEY;
+}
+
 async function callApi(pais, ciudad) {
-    const claveAPI = '';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${pais},${ciudad}&appid=${claveAPI}`;
   
-    const respuesta = await fetch(url);
-    const dataJson = await respuesta.json();
-  
-    return dataJson;
-  }
+  const apiKey = await getApiKey();
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${pais},${ciudad}&appid=${apiKey}`;
+
+  const respuesta = await fetch(url);
+  const dataJson = await respuesta.json();
+
+  return dataJson;
+}
   
   (async () => {
     const dataJson = await callApi('Ve', 'Caracas');
