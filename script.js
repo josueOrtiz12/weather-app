@@ -1,29 +1,23 @@
 const archivoJSON = './variables.json';
 
-function getApiKey(){
-  fetch(archivoJSON)
-  .then((respuesta) => respuesta.json())
-  .then((datosJSON) => {
-    // Accede a los datos del archivo JSON
-    console.log()
-    const API_KEY = datosJSON.API_KEY;
-    // Usa las variables como necesites
-    console.log(`API Key: ${API_KEY}`);
-    return API_KEY;
-  });
+async function getApiKey() {
+  const respuesta = await fetch(archivoJSON);
+  const datosJSON = await respuesta.json();
+
+  const API_KEY = datosJSON.API_KEY;
+  return API_KEY;
 }
 
-
-
 async function callApi(pais, ciudad) {
-    const apiKey = getApiKey()
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${pais},${ciudad}&appid=${apiKey}`;
   
-    const respuesta = await fetch(url);
-    const dataJson = await respuesta.json();
-  
-    return dataJson;
-  }
+  const apiKey = await getApiKey();
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${pais},${ciudad}&appid=${apiKey}`;
+
+  const respuesta = await fetch(url);
+  const dataJson = await respuesta.json();
+
+  return dataJson;
+}
   
   
   (async () => {
