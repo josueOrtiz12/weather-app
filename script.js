@@ -41,7 +41,7 @@ document.getElementById("time").innerHTML = hour;
 
 let onlyHour = parseInt((new Date()).toLocaleTimeString().slice(0, 2));
 
-console.log(onlyHour);
+console.log(onlyHour,'hour act');
 
 switch (true) {
   case (onlyHour >= 0) && (onlyHour <= 4):
