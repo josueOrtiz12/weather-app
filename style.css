@@ -1,10 +1,10 @@
-.container {
+/* .container {
     text-align: center;
     margin: 2%;
-}
+} */
 
 div#tempeture {
-    font-size: 10vh;
+    font-size: 52px;
 }
 .contry {
     font-size: 26px;
@@ -38,4 +38,39 @@ div#tempeture {
     background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   background-size: cover !important;
+  background-position: center;
 }
+
+.table-content {
+    display: flex;
+}
+.sidebard {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    background: #0c0c0c82;
+}
+.content-sidebard {
+    padding: 12%;
+    display: grid;
+}
+.labelContry{
+    color: #ffffff;
+    font-size: 23px;
+}
+
+select#contry {
+    font-size: 21px;
+    padding: 3px;
+    border-radius: 12px;
+    background: #d5dee50f;
+    color: #ffff;
+}
+
+select option {
+    margin: 40px;
+    background: rgba(121, 2, 2, 0);
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }

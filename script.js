@@ -45,38 +45,34 @@ console.log(onlyHour,'hour act');
 
 switch (true) {
   case (onlyHour >= 0) && (onlyHour <= 4):
-    document.querySelector('body').style.background = `linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 68%, rgba(92,9,119,1) 88%, rgba(0,212,255,1) 100%), rgb(2, 0, 36)`;
-
+    document.querySelector('body').style.backgroundImage  = `url(/background/night.jpg)`;
   break;
   
   case (onlyHour >= 4) && (onlyHour <= 6):
     console.log('de 4 a 6');
-    document.querySelector('body').style.background =`linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,227,0,1) 100%), rgb(2, 0, 36)`;
+    document.querySelector('body').style.backgroundImage  = `url(/background/sunrise.jpg)`;
  
   break;
   
   case (onlyHour >= 6) && (onlyHour <= 7 ):
-    document.querySelector('body').style.background = `linear-gradient(180deg, rgba(29,144,176,1) 0%, rgba(57,227,227,1) 100%), rgb(29, 144, 176)`;
+    document.querySelector('body').style.backgroundImage  = `url(/background/morning.jpg)`;
     
   break;
 
   case (onlyHour >= 7) && (onlyHour <= 14):
 
-  document.querySelector('body').style.background = `linear-gradient(180deg, rgba(29,127,176,1) 0%, rgba(175,189,196,1) 100%), rgb(29, 127, 176)`;
+  document.querySelector('body').style.backgroundImage  = `url(/background/sunset.jpg)`;
   break;
 
   case (onlyHour >= 15) && (onlyHour <= 17):
-      // document.getElementById('contry').style.color = "red"
-      document.querySelector('body').style.background = `linear-gradient(180deg, rgba(107,163,180,1) 0%, rgba(202,215,94,1) 41%, rgba(201,187,114,1) 100%), rgb(107,163,180)`;
+      document.querySelector('body').style.backgroundImage  = `url(/background/sunsetOne.jpg)`;
   break;
   case (onlyHour >= 17) && (onlyHour <= 19):
-      // document.getElementById('contry').style.color = "red"
-      document.querySelector('body').style.background = `linear-gradient(180deg, rgba(166,107,180,1) 0%, rgba(188,147,65,1) 53%, rgba(114,168,201,1) 100%), rgb(166,107,180)`;
+    document.querySelector('body').style.backgroundImage  = `url(/background/sunsetTwo.jpg)`;
   break;
 
   case (onlyHour >= 19) && (onlyHour <= 23):
-      // document.getElementById('contry').style.color = "red"
-      document.querySelector('body').style.background = `linear-gradient(rgb(3 2 22) 0%, rgb(3 3 24) 68%, rgb(4 2 28))`;
+    document.querySelector('body').style.backgroundImage  = `url(/background/night.jpg)`;
   break;
 
   default:
